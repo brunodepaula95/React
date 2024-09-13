@@ -1,12 +1,11 @@
-import Header from './Header'
-import InputWitText from './InputWithText'
+import Header from './components/Header/Header'
+import LoginForm from './components/LoginForm/LoginForm'
 
 function App() {
     return(
         <>
-        <Header hideMenu={true} />
         <Header hideMenu={false} name="Bruno" />
-        <InputWitText />
+        <LoginForm />
         </>
     )
 }
