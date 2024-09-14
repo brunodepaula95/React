@@ -9,9 +9,6 @@ function HomePage(){
 //header abaixo esta criando filhos a partir da props em HEADER.JSX
   return(
     <>
-    <Header>
-      <div>Ola eu sou um filho</div>
-    </Header> 
     <h1>Olá seja bem vindo</h1>
     {showTimer ? <Timer /> : null}
     <button onClick={function() {setShowTimer(!showTimer)}}>mostra/esconde</button>

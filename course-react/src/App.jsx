@@ -2,13 +2,14 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route} f
 import HomePage from './pages/Home/Home'
 import AboutPage from './pages/About/About'
 import RegisterPage from './pages/Register/Register'
+import Layout from './components/Layout/Layout'
 
 
 // a / em path route é o prefixo da rota, isso quer dizer que todas as rotas abaixo devem seguir o mesmo prefixo,ex /about.../menu
 
 //o index é um boolean quer dizer que é o index do prefixo /
 const browserRouter = createBrowserRouter(createRoutesFromElements(
-    <Route path="/">
+    <Route path="/" element={<Layout />} errorElement={<NotFound />}>
         <Route index element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
