@@ -14,12 +14,14 @@ function Header(props) {
         </ul>
       )}  
       {props.name}
+      {props.children}
   </header>
   )
 }
 
 Header.propTypes = {
   hideMenu: PropTypes.bool,
+  children: PropTypes.node,
   name: PropTypes.string
 }
 
